@@ -1,0 +1,15 @@
+.wrapper {
+    background-color: #babda2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    height: 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
