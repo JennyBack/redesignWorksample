@@ -1,6 +1,6 @@
 const Categories = () => {
     return (
-        <div>
+        <div style={{ height: '100%' }}>
             <p>Kategorier</p>
         </div>
     );

@@ -1,6 +1,6 @@
 const Hero = () => {
     return (
-        <div>
+        <div style={{ position: 'absolute', top: 0 }}>
             <img
                 alt="hero-image"
                 src="/XBa9CMlpYyDVj811694459282.webp"
