@@ -1,5 +1,6 @@
 import Categories from '../blocks/categories/Categories';
 import Hero from '../blocks/hero/Hero';
+import Puff from '../blocks/puff/Puff';
 
 const MainSection = () => {
     return (
@@ -17,6 +18,7 @@ const MainSection = () => {
             </div>
 
             <Categories />
+            <Puff />
         </>
     );
 };
