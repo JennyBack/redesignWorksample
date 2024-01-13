@@ -1,0 +1,22 @@
+.blogPostListWrapper {
+    display:flex;
+     margin-left:195px;
+     margin-right:195px;
+     height:700px;
+     margin-top:20px;
+     margin-bottom:20px;
+     
+ }
+ 
+ .column {
+     flex:25%;
+     justify-content: center;
+     margin:auto;
+     margin:0 5px;
+     background-color: #F6F6F6;
+ }
+
+ .blogPostListImg {
+    height:450px;
+    border:1px solid red;
+ }

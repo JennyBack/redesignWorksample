@@ -1,3 +1,4 @@
+import BlogPostList from '../blocks/blogPostList/BlogPostList';
 import Categories from '../blocks/categories/Categories';
 import Hero from '../blocks/hero/Hero';
 import Puff from '../blocks/puff/Puff';
@@ -6,7 +7,7 @@ const MainSection = () => {
     return (
         <>
             <Hero />
-            <div
+            {/* <div
                 style={{
                     display: 'flex',
                     justifyContent: 'center',
@@ -15,10 +16,10 @@ const MainSection = () => {
                 }}
             >
                 <h2>Populära kategorier</h2>
-            </div>
-
+            </div> */}
             <Categories />
             <Puff />
+            <BlogPostList />
         </>
     );
 };
