@@ -1,7 +1,6 @@
 .wrapper {
-    background-color: #babda2;
+    background-color:rgb(124, 39, 29,0.1);
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -10,6 +9,22 @@
     list-style: none;
     display: flex;
     align-items: center;
-    margin: auto;
     padding: 0;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 20%;
+}
+.listItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        visibility: hidden;
+    }
+    .list {
+        visibility: hidden;
+    }
 }

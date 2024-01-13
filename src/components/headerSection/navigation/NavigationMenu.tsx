@@ -1,12 +1,17 @@
+import { MenuItem } from '../HeaderSection';
 import styles from './NavigationMenu.module.css';
 
-const NavigationMenu = () => {
+type NavigationMenuProps = {
+    menuItems: MenuItem[];
+};
+
+const NavigationMenu = ({ menuItems }: NavigationMenuProps) => {
     return (
-        <div aria-label="navigation-menu">
-            <ul aria-label="navigation-list" className={styles.navigationWrapper}>
-                <li>menu1</li>
-                <li>menu2</li>
-                <li>menu3</li>
+        <div aria-label="navigation-menu" className={styles.navigationWrapper}>
+            <ul aria-label="navigation-list" className={styles.navigationList}>
+                {menuItems.map((item) => (
+                    <li key={item.id}>{item.title}</li>
+                ))}
             </ul>
         </div>
     );
