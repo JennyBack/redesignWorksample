@@ -21,8 +21,8 @@ const MainSection = () => {
             </div> */}
             <Slider />
 
-            <Categories />
-            <Puff />
+            {/* <Categories /> */}
+            {/* <Puff /> */}
         </>
     );
 };
