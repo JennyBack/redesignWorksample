@@ -1,0 +1,81 @@
+.sliderContainer {
+    display: flex;
+    margin: 0 15%;
+    justify-content: center;
+    /* overflow: hidden; */
+    /* overflow-x:scroll; */
+}
+
+.buttonRight {
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonLeft {
+    position: absolute;
+    left: 10%;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productsWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap:nowrap;
+    height:100%;
+    width:100%;
+}
+
+
+.productsList {
+    position:relative;
+    left:0;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap:nowrap;
+    list-style: none;
+    padding:0;
+}
+
+.productsListItem {
+    float:left;
+    height:400px;
+    width:300px;
+    border:1px solid black;
+    margin:2px;
+}
+
+.productsListImage {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;    
+        object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+    .categoriesWrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .categoriesList {
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    
+    }
+   
+}
