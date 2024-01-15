@@ -17,14 +17,17 @@
 }
 
 .productsListItem {
-    height:400px;
-    width:300px;
-    border:1px solid black;
+    position:relative;
+    float:left;
+    height:420px;
+    width:260px;
+    background-color:white;
+    margin:2px;
 }
 
 .productsListImage {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;    
-        object-fit: cover;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    overflow: hidden;
 }
