@@ -2,8 +2,8 @@
     display: flex;
     margin: 0 15%;
     justify-content: center;
-    overflow: hidden;
-    overflow-x:scroll;
+    overflow:hidden;
+    /* overflow-x:scroll; */
 }
 
 .buttonRight {

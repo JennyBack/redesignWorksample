@@ -2,6 +2,7 @@ import React, { Children, useState } from 'react';
 import styles from './Slider.module.css';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 type ProductListItemProps = {
     product: Product;
@@ -29,7 +30,7 @@ const products: Product[] = [
     },
     {
         id: 2,
-        img: '',
+        img: '/eyJrZXkiOiJzdG9yZV9lN2Q5OTFiNy00YWRkLTQ0NzQtYmI4ZS1lZDIzYzZhYmM5MDhcL2ltYWdlc1wvN00xNDNscDI2bWlqQXZUMTY3ODA5Mzg0OC5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0MDAsImhlaWdodCI6NDAwLCJ.webp',
         title: '',
         price: '',
         category: '',
@@ -75,29 +76,43 @@ const products: Product[] = [
 ];
 
 const Slider = () => {
-    const step = 5;
+    const step = 8;
     const isScrollRef = React.useRef();
     let scrollRef = React.useRef<HTMLDivElement>(null);
     let containerRef = React.useRef<HTMLUListElement>(null);
+    let testRef = React.useRef<HTMLDivElement>(null);
 
     const setMove = (state: any) => (isScrollRef.current = state);
 
     const moveLeft = () => {
-        if (isScrollRef.current && scrollRef.current) {
-            scrollRef.current.scrollLeft = scrollRef.current.scrollLeft + step;
+        if (isScrollRef.current && scrollRef.current && testRef.current) {
+            testRef.current.scrollLeft = testRef.current.scrollLeft - step;
             requestAnimationFrame(moveLeft);
         }
     };
     const moveRight = () => {
-        if (isScrollRef.current && scrollRef.current && containerRef.current) {
-            containerRef.current.scrollLeft = containerRef.current.scrollLeft - step;
+        if (isScrollRef.current && scrollRef.current && testRef.current) {
+            testRef.current.scrollLeft = testRef.current.scrollLeft + step;
             requestAnimationFrame(moveRight);
         }
     };
 
+    const [showHoverCard, setShowHoverCard] = React.useState<boolean>(false);
+    const [activeCardId, setActiveCardId] = React.useState<number | null>(null);
+
+    const handleHoverCard = (id: number, isOver: boolean) => {
+        setShowHoverCard(isOver);
+        setActiveCardId(id);
+    };
+
     const ProductListItem = ({ product }: ProductListItemProps) => {
         return (
-            <li key={product.id} className={styles.productsListItem}>
+            <li
+                key={product.id}
+                className={styles.productsListItem}
+                onMouseEnter={() => handleHoverCard(product.id, true)}
+                onMouseLeave={() => handleHoverCard(product.id, false)}
+            >
                 {product.id === 2 ? (
                     <div
                         style={{
@@ -117,9 +132,27 @@ const Slider = () => {
                         <p style={{ color: 'white' }}>Fynd</p>
                     </div>
                 ) : null}
+
                 <div style={{ width: '100%', height: '75%', backgroundColor: 'lightgray' }}>
-                    <img src="#" alt="product" className={styles.productsListImage} />
+                    <img src={product.img} alt="product" className={styles.productsListImage} />
+                    {showHoverCard && product.id === activeCardId ? (
+                        <div
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                padding: '10px',
+                                height: '100%',
+                                width: '100%',
+                                zIndex: '300'
+                            }}
+                        >
+                            <p style={{ padding: '2px' }}>4/5</p>
+                            <AddShoppingCartIcon sx={{ padding: '2px' }} />
+                        </div>
+                    ) : null}
                 </div>
+
                 <div className={styles.listTextSection}>
                     <p style={{ padding: 0, margin: 0 }}>Inomhusfärg</p>
                     <h4 style={{ padding: 0, margin: 0 }}>Lady Elegans</h4>
@@ -134,7 +167,13 @@ const Slider = () => {
                         >
                             200,00kr
                         </p>
-                        <p style={{ padding: 0, margin: 0, textDecoration: 'line-through' }}>
+                        <p
+                            style={{
+                                padding: 0,
+                                margin: 0,
+                                textDecoration: 'line-through'
+                            }}
+                        >
                             300,00kr
                         </p>
                     </div>
@@ -144,7 +183,7 @@ const Slider = () => {
     };
 
     return (
-        <div className={styles.sliderContainer}>
+        <div ref={testRef} className={styles.sliderContainer}>
             <div aria-label="product-slider" className={styles.productsWrapper}>
                 <div
                     ref={scrollRef}
@@ -158,7 +197,7 @@ const Slider = () => {
                     <ChevronLeftIcon />
                 </div>
                 <div>
-                    <ul ref={containerRef} className={styles.productsList}>
+                    <ul className={styles.productsList}>
                         {products.map((product: Product) => (
                             <ProductListItem product={product} />
                         ))}
