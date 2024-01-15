@@ -1,0 +1,118 @@
+.sliderContainer {
+    display: flex;
+    margin: 0 20%;
+    justify-content: center;
+    overflow:hidden;
+}
+
+.buttonRight {
+    position: absolute;
+    right: 17%;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonLeft {
+    position: absolute;
+    left: 17%;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productsWrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap:nowrap;
+    height:100%;
+    width:100%;
+}
+
+
+.productsList {
+    position:relative;
+    left:0;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap:nowrap;
+    list-style: none;
+    padding:0;
+}
+
+
+.categoriesWrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.categoriesList {
+    display: flex;
+    list-style: none;
+    padding:0;
+}
+
+.categoriesListNoOverflow {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding:0;
+    margin:auto;
+}
+
+.categoriesListItem {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:40px;
+    position:relative;
+    float:left;
+    width:100%;
+}
+
+.categoriesListImage {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;    
+        object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+    .categoriesWrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .categoriesList {
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    
+    }
+   
+}
+
+@media screen and (max-width: 500px) {
+    .categoriesWrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .categoriesList {
+        flex-wrap:wrap;
+        justify-content: space-evenly;
+    
+    }
+   
+}
