@@ -55,7 +55,8 @@ const MainSection = () => {
                     margin: '20px'
                 }}
             >
-              <h2>Populära kategorier</h2>
+                <h2>Populära kategorier</h2>
+            </div>
             <Categories />
             <Puff />
             <BlogPostList blogPosts={blogPosts} />
