@@ -1,3 +1,4 @@
+import React from 'react';
 import BlogPostList from '../blocks/blogPostList/BlogPostList';
 import Categories from '../blocks/categories/Categories';
 import Hero from '../blocks/hero/Hero';
@@ -46,7 +47,7 @@ const MainSection = () => {
     return (
         <>
             <Hero />
-            {/* <div
+            <div
                 style={{
                     display: 'flex',
                     justifyContent: 'center',
@@ -54,8 +55,7 @@ const MainSection = () => {
                     margin: '20px'
                 }}
             >
-                <h2>Populära kategorier</h2>
-            </div> */}
+              <h2>Populära kategorier</h2>
             <Categories />
             <Puff />
             <BlogPostList blogPosts={blogPosts} />

@@ -1,0 +1,30 @@
+.productsWrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    overflow:auto;
+    width:100%;
+}
+
+.productsList {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    width: 100%;
+    padding:0;
+    overflow:auto;
+}
+
+.productsListItem {
+    height:400px;
+    width:300px;
+    border:1px solid black;
+}
+
+.productsListImage {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;    
+        object-fit: cover;
+}
