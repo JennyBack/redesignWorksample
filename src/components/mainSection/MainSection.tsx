@@ -1,15 +1,13 @@
 import React from 'react';
 import Categories from '../blocks/categories/Categories';
 import Hero from '../blocks/hero/Hero';
-import ProductsList from '../blocks/productsList/productsList';
 import Puff from '../blocks/puff/Puff';
-import Slider from '../blocks/slider/Slider';
 
 const MainSection = () => {
     return (
         <>
             <Hero />
-            {/* <div
+            <div
                 style={{
                     display: 'flex',
                     justifyContent: 'center',
@@ -18,11 +16,9 @@ const MainSection = () => {
                 }}
             >
                 <h2>Populära kategorier</h2>
-            </div> */}
-            <Slider />
-
-            {/* <Categories /> */}
-            {/* <Puff /> */}
+            </div>
+            <Categories />
+            <Puff />
         </>
     );
 };
