@@ -1,0 +1,26 @@
+.footerWrapper {
+    display:flex;
+     height:500px;
+     margin-top:20px;
+     overflow:hidden; 
+ }
+ 
+ .footerColumnSmall {  
+     width:20%;
+     justify-content: center;
+     margin:auto;
+     background-color: #F6F6F6;  
+     overflow:hidden;
+     padding:30px;
+     height:inherit;
+ }
+
+ .footerColumnBig {  
+    width:40%;
+    justify-content: center;
+    margin:auto;
+    background-color: #F6F6F6;  
+    overflow:hidden;
+    padding:30px;
+    height:inherit;
+}

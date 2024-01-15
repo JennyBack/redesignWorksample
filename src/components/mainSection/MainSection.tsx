@@ -177,6 +177,21 @@ const MainSection = () => {
                 </div>
             </div>
             <CategoriesSlider categories={filteredCategories} />
+            <div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    margin: '20px 400px'
+                }}
+            >
+                <h2>
+                    Hos oss på Norrlandsfärg har det sedan starten 1965 varit självklart med god
+                    kundservice. Du kan känna dig trygg med köp hos oss oavsett om det är i butiken
+                    i Sundsvall eller online. Det går lika bra att kontakta oss via mail eller per
+                    telefon. Vår butik med generösa öppettider har funnits i över 50år.
+                </h2>
+            </div>
             <Puff />
             <BlogPostList blogPosts={blogPosts} />
             <ProductSlider />
