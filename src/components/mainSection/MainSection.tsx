@@ -27,28 +27,29 @@ const blogPosts: BlogPost[] = [
     {
         id: 1,
         img: '/hy3ETgWe8pFf80s1673383884.webp',
-        title: 'Väggfärg',
-        description: 'Lorem ipsum',
+        title: 'Måla om i köket',
+        description: 'Lorem ipsum dolor',
         link: ''
     },
     {
         id: 2,
         img: '/MBlM5i6Ax80y1DG1680511066.webp',
-        title: '',
-        description: 'Lorem ipsum',
-        link: ''
+        title: 'Såhär målar du på tapet',
+        description:
+            'Här kan du lära dig steg för steg hur du ska gå till väga för att måla över en tapet. ',
+        link: 'https://norrlandsfarg.se/sv/page/mala-pa-tapet-med-oss-och-anza'
     },
     {
         id: 3,
         img: '/MBlM5i6Ax80y1DG1680511066.webp',
-        title: '',
+        title: 'Måla fasad',
         description: 'Lorem ipsum',
         link: ''
     },
     {
         id: 4,
         img: '/RjGWXPkeonW1OJt1678271271.webp',
-        title: '',
+        title: 'Falu Rödfärg - allt du behöver veta.',
         description: 'Lorem ipsum',
         link: ''
     }

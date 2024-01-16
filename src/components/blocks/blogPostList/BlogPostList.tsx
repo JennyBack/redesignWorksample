@@ -12,9 +12,9 @@ const BlogPostList = ({ blogPosts }: BlogPostListProps) => {
         <div className={styles.blogPostListWrapper}>
             {blogPosts.map((post) => (
                 <div key={post.id} className={styles.column}>
-                    <div className={styles.blogPostListImg}>
-                        <img src={post.img} alt="blog-post" />
-                    </div>
+                    {/* <div> */}
+                    <img className={styles.blogPostListImg} src={post.img} alt="blog-post" />
+                    {/* </div> */}
                     <div>
                         <h3>{post.title}</h3>
                         <p>{post.description}</p>

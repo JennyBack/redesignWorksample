@@ -33,7 +33,7 @@
     font-size:1.5em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 950px) {
     .heroWrapper {
         height:90vh
     }
