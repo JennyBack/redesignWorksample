@@ -44,22 +44,38 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
                 </div>
             ) : null}
 
-            <div style={{ width: '100%', height: '75%' }}>
+            <div
+                style={{
+                    position: 'relative',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: '100%',
+                    height: '75%',
+                    overflow: 'hidden'
+                }}
+            >
                 <img src={product.img} alt="product" className={styles.productsListImage} />
                 {showHoverCard && product.id === activeCardId ? (
                     <div
                         style={{
+                            position: 'absolute',
                             display: 'flex',
+                            flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'center',
+                            margin: 'auto',
+                            top: '0px',
+                            right: '0px',
                             padding: '10px',
                             height: '100%',
                             width: '100%',
-                            zIndex: '300'
+                            zIndex: '300',
+                            backgroundColor: 'rgba(255,255,255, 0.7)'
                         }}
                     >
-                        <p style={{ padding: '2px' }}>4/5</p>
-                        <AddShoppingCartIcon sx={{ padding: '2px' }} />
+                        <p style={{ padding: '2px' }}>show start rating here</p>
+                        <AddShoppingCartIcon sx={{ padding: '2px', cursor: 'pointer' }} />
                     </div>
                 ) : null}
             </div>

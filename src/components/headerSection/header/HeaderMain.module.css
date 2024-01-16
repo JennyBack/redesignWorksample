@@ -7,15 +7,15 @@
 
 .cartCountChip {
     border-radius: 50%;
-    background-color: rgb(124, 39, 29,0.3);
+    background-color: rgb(124, 39, 29,0.8);
     position: absolute;
     height: 20px;
-    width: 35px;
-    width: 7px;
     width: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:auto;
     top: -7px;
     right: -7px;
+    z-index:100;
 }

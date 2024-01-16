@@ -24,14 +24,15 @@ const FooterSection = () => {
                     }}
                     onClick={() => setShowOpenhours(!showOpenhours)}
                 >
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <h3 style={{ padding: 0, margin: 0 }}>Öppettider i butik</h3>
+                    <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+                        <h3 style={{ padding: 0, margin: 0, width: '50%' }}>Öppettider i butik</h3>
                         <div
                             style={{
                                 display: 'flex',
-                                justifyContent: 'center',
+                                justifyContent: 'flex-end',
                                 alignItems: 'center',
-                                margin: '0 10px'
+                                margin: '0 20px',
+                                width: '50%'
                             }}
                         >
                             {!showOpenhours ? <AddIcon /> : <RemoveIcon />}
@@ -57,14 +58,15 @@ const FooterSection = () => {
                     }}
                     onClick={() => setShowContact(!showContact)}
                 >
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <h3 style={{ padding: 0, margin: 0 }}>Kontakt</h3>
+                    <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+                        <h3 style={{ padding: 0, margin: 0, width: '50%' }}>Kontakt</h3>
                         <div
                             style={{
                                 display: 'flex',
-                                justifyContent: 'center',
+                                justifyContent: 'flex-end',
                                 alignItems: 'center',
-                                margin: '0 10px'
+                                margin: '0 20px',
+                                width: '50%'
                             }}
                         >
                             {!showContact ? <AddIcon /> : <RemoveIcon />}
@@ -91,14 +93,15 @@ const FooterSection = () => {
                     }}
                     onClick={() => setShowLinks(!showLinks)}
                 >
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <h3 style={{ padding: 0, margin: 0 }}>Snabblänkar</h3>
+                    <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+                        <h3 style={{ padding: 0, margin: 0, width: '50%' }}>Snabblänkar</h3>
                         <div
                             style={{
                                 display: 'flex',
-                                justifyContent: 'center',
+                                justifyContent: 'flex-end',
                                 alignItems: 'center',
-                                margin: '0 10px'
+                                margin: '0 20px',
+                                width: '50%'
                             }}
                         >
                             {!showLinks ? <AddIcon /> : <RemoveIcon />}
@@ -124,6 +127,7 @@ const FooterSection = () => {
                         spamfritt!
                     </p>
                     <input />
+                    <button>Sign up</button>
                 </div>
             </div>
         );
@@ -158,6 +162,7 @@ const FooterSection = () => {
                     Vi kommer även bjuda på överraskningar. Garanterat spamfritt!
                 </p>
                 <input />
+                <button>Sign up</button>
             </div>
         </div>
     );

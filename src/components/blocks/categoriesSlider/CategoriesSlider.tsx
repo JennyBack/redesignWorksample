@@ -3,6 +3,7 @@ import styles from './CategoriesSlider.module.css';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { CategoryItem } from '../../mainSection/MainSection';
+import useCheckMobileScreen from '../../../hooks/useCheckMobileScreen';
 
 type CategoriesSliderProps = {
     categories: CategoryItem[];
@@ -35,6 +36,7 @@ const CategoriesSlider = ({ categories }: CategoriesSliderProps) => {
     let testRef = React.useRef<HTMLDivElement>(null);
 
     const isOverflow: boolean = useIsOverflow(testRef);
+    let isMobile = useCheckMobileScreen();
 
     const setMove = (state: any) => (isScrollRef.current = state);
 
@@ -50,6 +52,37 @@ const CategoriesSlider = ({ categories }: CategoriesSliderProps) => {
             requestAnimationFrame(moveRight);
         }
     };
+
+    if (isMobile) {
+        return (
+            <div>
+                {' '}
+                <ul
+                    className={isOverflow ? styles.categoriesList : styles.categoriesListNoOverflow}
+                >
+                    {categories.map((category) => (
+                        <li key={category.id} className={styles.categoriesListItem}>
+                            <img
+                                alt="category-image"
+                                src={category.img}
+                                className={styles.categoriesListImage}
+                            />
+                            <p
+                                style={{
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
+                                    maxWidth: '80px',
+                                    overflow: 'hidden'
+                                }}
+                            >
+                                {category.title}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        );
+    }
 
     return (
         <div ref={testRef} className={styles.sliderContainer}>
