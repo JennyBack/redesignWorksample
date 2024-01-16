@@ -11,6 +11,10 @@ const HeaderMain = () => {
             <div>
                 <img src="/logo.webp" alt="logo" />
             </div>
+            <div>
+                <a href={'https://norrlandsfarg.se/sv/page/kopvillkor'}>Kundtjänst</a>
+                <a href={''}>Hitta butik</a>
+            </div>
             <div
                 style={{
                     display: 'flex',
