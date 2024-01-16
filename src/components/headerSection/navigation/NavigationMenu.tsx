@@ -1,3 +1,4 @@
+import useCheckMobileScreen from '../../../hooks/useCheckMobileScreen';
 import { MenuItem } from '../HeaderSection';
 import styles from './NavigationMenu.module.css';
 
@@ -6,7 +7,8 @@ type NavigationMenuProps = {
 };
 
 const NavigationMenu = ({ menuItems }: NavigationMenuProps) => {
-    return (
+    let isMobile = useCheckMobileScreen();
+    return !isMobile ? (
         <div aria-label="navigation-menu" className={styles.navigationWrapper}>
             <ul aria-label="navigation-list" className={styles.navigationList}>
                 {menuItems.map((item) => (
@@ -14,7 +16,7 @@ const NavigationMenu = ({ menuItems }: NavigationMenuProps) => {
                 ))}
             </ul>
         </div>
-    );
+    ) : null;
 };
 
 export default NavigationMenu;

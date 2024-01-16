@@ -3,6 +3,7 @@ import HeaderMain from './header/HeaderMain';
 import NavigationMenu from './navigation/NavigationMenu';
 import TopBar from './topBar/TopBar';
 import styles from './HeaderSection.module.css';
+import useCheckMobileScreen from '../../hooks/useCheckMobileScreen';
 
 export type MenuItem = {
     id: number;
@@ -32,6 +33,7 @@ const topBarItems: TopBarItem[] = [
 
 const HeaderSection = () => {
     const [showFullHeader, setshowFullHeader] = useState(true);
+    let isMobile = useCheckMobileScreen();
 
     const toggleshowFullHeader = () => {
         const scrolled = document.documentElement.scrollTop;
@@ -48,10 +50,10 @@ const HeaderSection = () => {
         <div className={styles.headerSectionWrapper}>
             <div
                 style={{
-                    opacity: !showFullHeader ? '0' : '1',
+                    opacity: isMobile ? '1' : !showFullHeader ? '0' : '1',
                     transition: 'all .3s',
-                    visibility: !showFullHeader ? 'hidden' : 'visible',
-                    height: !showFullHeader ? '0px' : ''
+                    visibility: isMobile ? 'visible' : !showFullHeader ? 'hidden' : 'visible',
+                    height: isMobile ? '' : !showFullHeader ? '0px' : ''
                 }}
             >
                 <TopBar topBarItems={topBarItems} />

@@ -1,3 +1,4 @@
+import useCheckMobileScreen from '../../../hooks/useCheckMobileScreen';
 import { TopBarItem } from '../HeaderSection';
 import styles from './TopBar.module.css';
 import CheckIcon from '@mui/icons-material/Check';
@@ -7,7 +8,9 @@ type TopBarProps = {
 };
 
 const TopBar = ({ topBarItems }: TopBarProps) => {
-    return (
+    let isMobile = useCheckMobileScreen();
+
+    return !isMobile ? (
         <div aria-label="top-bar" className={styles.wrapper}>
             <ul aria-label="top-bar-content" className={styles.list}>
                 {topBarItems.map((item) => (
@@ -25,7 +28,7 @@ const TopBar = ({ topBarItems }: TopBarProps) => {
                 ))}
             </ul>
         </div>
-    );
+    ) : null;
 };
 
 export default TopBar;

@@ -71,7 +71,7 @@ const categoryItems: CategoryItem[] = [
         id: 3,
         categoryId: 2,
         img: '/1ttJcRCF2kT3bzW1673384753.jpeg',
-        title: 'Lack & Snickerifärg'
+        title: 'Lack & Snickeri'
     },
     {
         id: 4,
@@ -135,7 +135,7 @@ const MainSection = () => {
                     flexDirection: 'column',
                     alignItems: 'flex-start',
 
-                    margin: '20px 200px'
+                    margin: '5%'
                 }}
             >
                 <div
@@ -182,7 +182,7 @@ const MainSection = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    margin: '20px 400px'
+                    margin: '5%'
                 }}
             >
                 <h2>

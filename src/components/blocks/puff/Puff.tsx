@@ -1,9 +1,12 @@
 import { style } from '@mui/system';
 import styles from './Puff.module.css';
 import EastIcon from '@mui/icons-material/East';
+import useCheckMobileScreen from '../../../hooks/useCheckMobileScreen';
 
 const Puff = () => {
-    return (
+    let isMobile = useCheckMobileScreen();
+
+    return !isMobile ? (
         <div aria-label="puff-section" className={styles.puffWrapper}>
             <div className={styles.column}>
                 <img src="/QJS9niJNxCpoWLZ1683546027.webp" alt="" className={styles.puffImg} />
@@ -25,7 +28,7 @@ const Puff = () => {
                 </div>
             </div>
         </div>
-    );
+    ) : null;
 };
 
 export default Puff;

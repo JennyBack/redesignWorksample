@@ -9,12 +9,3 @@
     list-style: none;
     margin: 0 20% 0 20%;
 }
-
-@media screen and (max-width: 500px) {
-    .navigationWrapper {
-        visibility: hidden;
-    }
-    .navigationList {
-        visibility: hidden;
-    }
-}
