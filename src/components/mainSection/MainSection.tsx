@@ -153,7 +153,11 @@ const MainSection = () => {
                             key={''}
                             id={''}
                             onClick={(e) => handleChangeSelectedCategories(e)}
-                            style={{ margin: ' 0 10px', cursor: 'pointer' }}
+                            style={{
+                                margin: ' 0 10px',
+                                cursor: 'pointer',
+                                textDecoration: selectedCategory === '' ? 'underline' : ''
+                            }}
                         >
                             Alla
                         </li>
@@ -161,7 +165,11 @@ const MainSection = () => {
                             key={'1'}
                             id={'1'}
                             onClick={(e) => handleChangeSelectedCategories(e)}
-                            style={{ margin: '0 10px', cursor: 'pointer' }}
+                            style={{
+                                margin: '0 10px',
+                                cursor: 'pointer',
+                                textDecoration: selectedCategory === '1' ? 'underline' : ''
+                            }}
                         >
                             Inomhusfärg
                         </li>
@@ -169,7 +177,11 @@ const MainSection = () => {
                             key={'2'}
                             id={'2'}
                             onClick={(e) => handleChangeSelectedCategories(e)}
-                            style={{ margin: ' 0 10px', cursor: 'pointer' }}
+                            style={{
+                                margin: ' 0 10px',
+                                cursor: 'pointer',
+                                textDecoration: selectedCategory === '2' ? 'underline' : ''
+                            }}
                         >
                             Utomhusfärg
                         </li>
@@ -194,6 +206,23 @@ const MainSection = () => {
             </div>
             <Puff />
             <BlogPostList blogPosts={blogPosts} />
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    margin: '0 5%'
+                }}
+            >
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'flex-start'
+                    }}
+                >
+                    <h2>Populära produkter</h2>
+                </div>
+            </div>
             <ProductSlider />
         </>
     );

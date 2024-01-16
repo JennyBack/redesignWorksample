@@ -4,6 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(78, 78, 78, 0.5);
 }
 
 .heroText {
@@ -13,7 +14,7 @@
     top: 63%;
     left: 35%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.4);
   }
 
 .heroTitle {

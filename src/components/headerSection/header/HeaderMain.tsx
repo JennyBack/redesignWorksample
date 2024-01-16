@@ -10,10 +10,10 @@ const HeaderMain = () => {
 
     if (isMobile) {
         return (
-            <div>
+            <div style={{ backgroundColor: 'rgba(100,100,100, 0.1)' }}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <div style={{ width: '25%', marginLeft: '3%' }}>
-                        <MenuIcon />
+                        <MenuIcon sx={{ height: '30px', width: '30px', color: '#0000007d' }} />
                     </div>
 
                     <div style={{ height: '4em', width: '50%' }}>
@@ -29,14 +29,23 @@ const HeaderMain = () => {
                             alignItems: 'center',
                             justifyContent: 'center',
                             position: 'relative',
-                            width: '25%',
-                            marginRight: '3%'
+                            width: '25%'
                         }}
                     >
-                        <AccountCircleIcon />
-                        <div>
-                            <div className={styles.cartCountChip}>0</div>
-                            <ShoppingBasketIcon />
+                        <div style={{ marginRight: '10px' }}>
+                            <AccountCircleIcon
+                                sx={{ height: '30px', width: '30px', color: '#0000007d' }}
+                            />
+                        </div>
+
+                        <div style={{ position: 'relative' }}>
+                            <ShoppingBasketIcon
+                                sx={{ height: '30px', width: '30px', color: '#0000007d' }}
+                            />
+
+                            <div className={styles.cartCountChip}>
+                                <p style={{ color: 'white' }}>0</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,7 +59,7 @@ const HeaderMain = () => {
                         height: '5em'
                     }}
                 >
-                    <SearchIcon />
+                    <SearchIcon sx={{ height: '30px', width: '30px', color: '#737373' }} />
                     <input />
                 </div>
             </div>
@@ -58,28 +67,64 @@ const HeaderMain = () => {
     }
     return (
         <div aria-label="header-main" className={styles.headerWrapper}>
-            <div>
+            <div
+                style={{
+                    width: '33%',
+                    display: 'flex',
+                    justifyContent: 'flex-start',
+                    margin: 'auto'
+                }}
+            >
+                <SearchIcon sx={{ height: '30px', width: '30px', color: '#737373' }} />
                 <input style={{ borderBottom: '1px solid black' }} />
             </div>
-            <div>
+            <div
+                style={{ display: 'flex', justifyContent: 'center', margin: 'auto', width: '33%' }}
+            >
                 <img src="/logo.webp" alt="logo" />
             </div>
-            <div>
-                <a href={'https://norrlandsfarg.se/sv/page/kopvillkor'}>Kundtjänst</a>
-                <a href={''}>Hitta butik</a>
-            </div>
+
             <div
                 style={{
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between',
-                    position: 'relative'
+                    position: 'relative',
+                    width: '33%'
                 }}
             >
-                <AccountCircleIcon />
                 <div>
-                    <div className={styles.cartCountChip}>0</div>
-                    <ShoppingBasketIcon />
+                    <a
+                        style={{ textDecoration: 'none', color: 'black', marginRight: '20px' }}
+                        href={'https://norrlandsfarg.se/sv/page/kopvillkor'}
+                    >
+                        Kundtjänst
+                    </a>
+                    <a style={{ textDecoration: 'none', color: 'black' }} href={''}>
+                        Hitta butik
+                    </a>
+                </div>
+                <div
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        margin: 'auto',
+                        alignItems: 'center'
+                    }}
+                >
+                    <div style={{ cursor: 'pointer', marginRight: '15px' }}>
+                        <AccountCircleIcon
+                            sx={{ height: '30px', width: '30px', color: '#737373' }}
+                        />
+                    </div>
+                    <div style={{ position: 'relative', cursor: 'pointer' }}>
+                        <ShoppingBasketIcon
+                            sx={{ height: '30px', width: '30px', color: '#737373' }}
+                        />
+
+                        <div className={styles.cartCountChip}>
+                            <p style={{ color: 'white' }}>0</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

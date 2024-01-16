@@ -3,7 +3,7 @@
                 right: 20px;
                 bottom: 20px;
                 cursor: pointer;
-                color: red;
-                background-color: lightgray;
+                background-color: rgb(124, 39, 29,0.8);
                 border-radius: 50%; 
+                color:white;
 }

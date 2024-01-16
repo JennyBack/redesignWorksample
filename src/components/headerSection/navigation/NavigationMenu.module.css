@@ -1,6 +1,6 @@
 .navigationWrapper {
     border-top: 0.5px solid rgb(124, 39, 29,0.3);
-    padding:15px
+    padding:15px;
 }
 .navigationList {
     display: flex;
